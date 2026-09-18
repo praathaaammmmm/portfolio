@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <linearGradient id="sBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e2a4d"/>
+      <stop offset="1" stop-color="#071b35"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#sBg)"/>
+  <g stroke="#ffc21a" stroke-width="2" fill="none" opacity="0.85">
+    <path d="M40 200 L80 200 L100 120 L130 280 L160 60 L190 340 L220 200 L260 200 L290 160 L320 240 L350 200 L560 200"/>
+  </g>
+  <g fill="#ffc21a">
+    <circle cx="160" cy="60" r="4"/>
+    <circle cx="190" cy="340" r="4"/>
+  </g>
+  <text x="30" y="40" font-family="monospace" font-size="12" fill="#fff0c9" opacity="0.55">$ ollama run qwen3:8b --stream</text>
+</svg>

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 720" fill="none">
+  <defs>
+    <linearGradient id="zBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071b35"/>
+      <stop offset="1" stop-color="#0e2a4d"/>
+    </linearGradient>
+    <linearGradient id="zEdge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#24b7ae"/>
+      <stop offset="1" stop-color="#8ff0e6"/>
+    </linearGradient>
+    <radialGradient id="zNode" cx="0.35" cy="0.35" r="0.7">
+      <stop offset="0" stop-color="#8ff0e6"/>
+      <stop offset="1" stop-color="#24b7ae"/>
+    </radialGradient>
+    <filter id="zGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="720" fill="url(#zBg)"/>
+
+  <!-- circuit-style grid texture -->
+  <g stroke="#fff0c9" stroke-width="1" opacity="0.05">
+    <line x1="0" y1="120" x2="900" y2="120"/>
+    <line x1="0" y1="240" x2="900" y2="240"/>
+    <line x1="0" y1="480" x2="900" y2="480"/>
+    <line x1="0" y1="600" x2="900" y2="600"/>
+    <line x1="150" y1="0" x2="150" y2="720"/>
+    <line x1="750" y1="0" x2="750" y2="720"/>
+  </g>
+
+  <!-- ambient glow behind the pipeline -->
+  <circle cx="450" cy="360" r="230" fill="#24b7ae" opacity="0.16" filter="url(#zGlow)"/>
+  <circle cx="700" cy="180" r="120" fill="#f35e9b" opacity="0.08" filter="url(#zGlow)"/>
+
+  <!-- agent pipeline: research -> retrieve -> reason -> stream -->
+  <g stroke="url(#zEdge)" stroke-width="2" fill="none" opacity="0.85">
+    <path d="M110 560 L280 420 L460 480 L640 260 L790 300"/>
+  </g>
+  <g stroke="#8ff0e6" stroke-width="1.2" fill="none" opacity="0.4">
+    <path d="M280 420 L320 220"/>
+    <path d="M460 480 L500 620"/>
+    <path d="M640 260 L690 120"/>
+  </g>
+  <g stroke="#fff0c9" stroke-width="0.75" fill="none" opacity="0.15">
+    <path d="M110 560 Q200 480 280 420"/>
+    <path d="M460 480 Q550 400 640 260"/>
+  </g>
+
+  <!-- pipeline stage nodes -->
+  <g>
+    <circle cx="110" cy="560" r="16" fill="url(#zNode)"/>
+    <circle cx="110" cy="560" r="26" fill="none" stroke="#24b7ae" stroke-width="1" opacity="0.4"/>
+    <circle cx="460" cy="480" r="15" fill="url(#zNode)"/>
+    <circle cx="790" cy="300" r="17" fill="url(#zNode)"/>
+    <circle cx="790" cy="300" r="28" fill="none" stroke="#24b7ae" stroke-width="1" opacity="0.4"/>
+  </g>
+  <g fill="#fff0c9">
+    <circle cx="280" cy="420" r="8"/>
+    <circle cx="640" cy="260" r="8"/>
+  </g>
+  <g fill="#f35e9b">
+    <circle cx="320" cy="220" r="6"/>
+    <circle cx="690" cy="120" r="6"/>
+    <circle cx="500" cy="620" r="6"/>
+  </g>
+
+  <!-- small orbiting data points mid-flight -->
+  <g fill="#ffc21a">
+    <circle cx="195" cy="490" r="3.4"/>
+    <circle cx="370" cy="450" r="3.4"/>
+    <circle cx="550" cy="370" r="3.4"/>
+    <circle cx="715" cy="280" r="3.4"/>
+  </g>
+
+  <!-- stage labels, terminal-style -->
+  <g font-family="monospace" font-size="13" fill="#8ff0e6" opacity="0.75" letter-spacing="0.5">
+    <text x="70" y="600">RESEARCH</text>
+    <text x="420" y="522">RETRIEVE · RAG</text>
+    <text x="742" y="342">STREAM · SSE</text>
+  </g>
+  <text x="40" y="52" font-family="monospace" font-size="15" fill="#fff0c9" opacity="0.55">$ zenith --pipeline run idea.md</text>
+  <text x="40" y="76" font-family="monospace" font-size="12" fill="#24b7ae" opacity="0.6">agents: 4 active · grounding: verified</text>
+</svg>

@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="none">
+  <defs>
+    <linearGradient id="edgeA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#24b7ae"/>
+      <stop offset="1" stop-color="#f35e9b"/>
+    </linearGradient>
+    <linearGradient id="edgeB" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffc21a"/>
+      <stop offset="1" stop-color="#24b7ae"/>
+    </linearGradient>
+    <radialGradient id="nodeCore" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff0c9"/>
+      <stop offset="1" stop-color="#24b7ae"/>
+    </radialGradient>
+    <filter id="soften" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="softenLg" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+  </defs>
+
+  <!-- concentric depth rings -->
+  <g stroke="#fff0c9" stroke-width="1" opacity="0.08">
+    <circle cx="320" cy="320" r="140"/>
+    <circle cx="320" cy="320" r="210"/>
+    <circle cx="320" cy="320" r="278"/>
+  </g>
+
+  <!-- soft ambient bloom behind the core cluster -->
+  <circle cx="320" cy="320" r="120" fill="#24b7ae" opacity="0.16" filter="url(#softenLg)"/>
+  <circle cx="230" cy="230" r="70" fill="#f35e9b" opacity="0.14" filter="url(#softenLg)"/>
+
+  <!-- background layer: dim, distant nodes -->
+  <g fill="#fff0c9" opacity="0.22">
+    <circle cx="90" cy="120" r="3"/>
+    <circle cx="560" cy="90" r="3"/>
+    <circle cx="70" cy="480" r="3"/>
+    <circle cx="580" cy="520" r="3"/>
+    <circle cx="470" cy="60" r="2.5"/>
+    <circle cx="120" cy="560" r="2.5"/>
+  </g>
+
+  <!-- primary connective structure -->
+  <g stroke-width="1.4" fill="none" opacity="0.75">
+    <path stroke="url(#edgeA)" d="M180 180 L320 320 L460 200"/>
+    <path stroke="url(#edgeA)" d="M320 320 L230 460"/>
+    <path stroke="url(#edgeB)" d="M320 320 L470 430"/>
+    <path stroke="url(#edgeB)" d="M180 180 L120 300"/>
+    <path stroke="url(#edgeA)" d="M460 200 L520 300"/>
+    <path stroke="url(#edgeB)" d="M230 460 L120 300"/>
+    <path stroke="url(#edgeA)" d="M470 430 L520 300"/>
+  </g>
+  <g stroke="#fff0c9" stroke-width="0.75" opacity="0.18" fill="none">
+    <path d="M180 180 Q320 120 460 200"/>
+    <path d="M120 300 Q220 380 230 460"/>
+    <path d="M470 430 Q420 490 320 320" />
+  </g>
+
+  <!-- mid nodes -->
+  <g fill="none" stroke="#24b7ae" stroke-width="1.2" opacity="0.5">
+    <circle cx="180" cy="180" r="14"/>
+    <circle cx="460" cy="200" r="12"/>
+    <circle cx="230" cy="460" r="12"/>
+    <circle cx="470" cy="430" r="11"/>
+  </g>
+  <g fill="#f35e9b">
+    <circle cx="180" cy="180" r="6"/>
+    <circle cx="460" cy="200" r="5.5"/>
+    <circle cx="230" cy="460" r="5.5"/>
+  </g>
+  <g fill="#ffc21a">
+    <circle cx="470" cy="430" r="5"/>
+    <circle cx="120" cy="300" r="5"/>
+    <circle cx="520" cy="300" r="5"/>
+  </g>
+
+  <!-- glowing core node: the system's "center of mass" -->
+  <circle cx="320" cy="320" r="26" fill="#24b7ae" opacity="0.35" filter="url(#soften)"/>
+  <circle cx="320" cy="320" r="15" fill="url(#nodeCore)"/>
+  <circle cx="320" cy="320" r="15" fill="none" stroke="#fff0c9" stroke-width="1" opacity="0.4"/>
+
+  <!-- small in-flight data points along the primary edges -->
+  <g fill="#fff0c9">
+    <circle cx="250" cy="250" r="2.6"/>
+    <circle cx="390" cy="260" r="2.6"/>
+    <circle cx="270" cy="390" r="2.6"/>
+    <circle cx="395" cy="375" r="2.6"/>
+  </g>
+
+  <!-- technical readout marks -->
+  <g font-family="monospace" font-size="11" fill="#fff0c9" opacity="0.4" letter-spacing="1">
+    <text x="180" y="160">NODE_A</text>
+    <text x="470" y="188">NODE_B</text>
+    <text x="200" y="486">NODE_C</text>
+  </g>
+  <g stroke="#fff0c9" stroke-width="1" opacity="0.25">
+    <line x1="160" y1="164" x2="196" y2="164"/>
+    <line x1="450" y1="192" x2="486" y2="192"/>
+  </g>
+</svg>

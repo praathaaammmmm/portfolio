@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 480" fill="none">
+  <defs>
+    <linearGradient id="aBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff0c9"/>
+      <stop offset="1" stop-color="#f6e3ab"/>
+    </linearGradient>
+    <linearGradient id="aBar" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#f36a16"/>
+      <stop offset="1" stop-color="#ffab6e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="480" fill="url(#aBg)"/>
+
+  <!-- field rows: the "crop" motif, rendered as clean editorial stripes -->
+  <g stroke="#071b35" stroke-width="1" opacity="0.08">
+    <line x1="0" y1="80" x2="1400" y2="80"/>
+    <line x1="0" y1="150" x2="1400" y2="150"/>
+    <line x1="0" y1="220" x2="1400" y2="220"/>
+    <line x1="0" y1="290" x2="1400" y2="290"/>
+  </g>
+  <g stroke="#f36a16" stroke-width="2" opacity="0.35">
+    <path d="M0 100 Q350 60 700 100 T1400 100"/>
+    <path d="M0 240 Q350 280 700 240 T1400 240"/>
+  </g>
+
+  <!-- data-visualization overlay: a yield / recommendation chart -->
+  <g transform="translate(120,340)">
+    <rect x="0" y="-40" width="34" height="40" fill="url(#aBar)" opacity="0.9"/>
+    <rect x="52" y="-72" width="34" height="72" fill="url(#aBar)" opacity="0.9"/>
+    <rect x="104" y="-54" width="34" height="54" fill="url(#aBar)" opacity="0.75"/>
+    <rect x="156" y="-96" width="34" height="96" fill="url(#aBar)" opacity="0.9"/>
+    <rect x="208" y="-30" width="34" height="30" fill="url(#aBar)" opacity="0.6"/>
+    <line x1="-10" y1="0" x2="260" y2="0" stroke="#071b35" stroke-width="1.4" opacity="0.5"/>
+  </g>
+
+  <!-- trend line + scatter, representing the recommendation model -->
+  <g transform="translate(420,0)">
+    <path d="M0 300 C120 260 200 320 320 240 S520 160 700 190" stroke="#f36a16" stroke-width="2.5" fill="none" opacity="0.85"/>
+    <g fill="#071b35" opacity="0.55">
+      <circle cx="0" cy="300" r="4"/>
+      <circle cx="120" cy="260" r="4"/>
+      <circle cx="200" cy="320" r="4"/>
+      <circle cx="320" cy="240" r="4"/>
+      <circle cx="520" cy="160" r="4"/>
+      <circle cx="700" cy="190" r="4"/>
+    </g>
+    <g fill="#f36a16">
+      <circle cx="320" cy="240" r="7"/>
+    </g>
+  </g>
+
+  <!-- soft sun / status marker, top right -->
+  <circle cx="1290" cy="90" r="46" fill="#f36a16" opacity="0.16"/>
+  <circle cx="1290" cy="90" r="26" fill="none" stroke="#f36a16" stroke-width="2" opacity="0.5"/>
+  <circle cx="1290" cy="90" r="10" fill="#f36a16" opacity="0.8"/>
+
+  <!-- print-style annotation marks -->
+  <g font-family="monospace" font-size="13" fill="#071b35" opacity="0.55" letter-spacing="0.5">
+    <text x="120" y="60">FIELD YIELD INDEX</text>
+    <text x="440" y="60">RECOMMENDATION CONFIDENCE</text>
+  </g>
+  <text x="40" y="440" font-family="monospace" font-size="14" fill="#071b35" opacity="0.5">$ agriwise --recommend --field N24 --season kharif</text>
+  <g stroke="#071b35" stroke-width="1" opacity="0.15">
+    <line x1="0" y1="0" x2="0" y2="480"/>
+    <line x1="1399" y1="0" x2="1399" y2="480"/>
+  </g>
+</svg>
