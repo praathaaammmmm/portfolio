@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 480" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0c9"/><stop offset="1" stop-color="#f8dfaa"/></linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#173e5f"/><stop offset="1" stop-color="#071b35"/></linearGradient>
+  </defs>
+  <rect width="1400" height="480" fill="url(#bg)"/>
+  <g stroke="#071b35" opacity=".08"><path d="M0 94H1400M0 190H1400M0 286H1400M0 382H1400"/></g>
+  <circle cx="1110" cy="120" r="126" fill="#f36a16" opacity=".12"/>
+  <rect x="545" y="42" width="310" height="396" rx="38" fill="#071b35"/>
+  <rect x="563" y="70" width="274" height="340" rx="24" fill="url(#screen)"/>
+  <rect x="594" y="108" width="212" height="54" rx="12" fill="#24b7ae" fill-opacity=".28"/>
+  <circle cx="627" cy="135" r="13" fill="#24b7ae"/><path d="M656 129h110m-110 18h77" stroke="#8ff0e6" stroke-width="6" stroke-linecap="round" opacity=".75"/>
+  <g fill="#fff0c9"><rect x="594" y="192" width="92" height="106" rx="14" opacity=".92"/><rect x="714" y="192" width="92" height="106" rx="14" opacity=".7"/><rect x="594" y="320" width="212" height="52" rx="16" fill="#f36a16"/></g>
+  <path d="M232 319c0-88 72-160 160-160s160 72 160 160" stroke="#f36a16" stroke-width="4" opacity=".55"/><circle cx="392" cy="319" r="40" fill="#f36a16" opacity=".85"/><path d="M368 319l17 17 34-39" stroke="#fff0c9" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <g stroke="#071b35" stroke-width="3" opacity=".55"><path d="M965 303h199M1005 263v80M1055 230v113M1105 273v70"/></g>
+  <g font-family="monospace" fill="#071b35"><text x="72" y="62" font-size="15" opacity=".65">SWITCH ON / REPAIR JOURNEY</text><text x="72" y="438" font-size="14" opacity=".55">diagnose · book · track · approve · warranty</text></g>
+</svg>

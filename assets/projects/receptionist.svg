@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 720" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071b35"/><stop offset="1" stop-color="#12395d"/></linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#24b7ae"/><stop offset="1" stop-color="#8ff0e6"/></linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="24"/></filter>
+  </defs>
+  <rect width="900" height="720" fill="url(#bg)"/>
+  <circle cx="664" cy="220" r="160" fill="#24b7ae" opacity=".14" filter="url(#blur)"/>
+  <g stroke="#fff0c9" opacity=".07"><path d="M0 110H900M0 250H900M0 470H900M180 0V720M720 0V720"/></g>
+  <rect x="145" y="172" width="395" height="335" rx="24" fill="#071b35" stroke="#8ff0e6" stroke-opacity=".6" stroke-width="2"/>
+  <rect x="175" y="205" width="335" height="52" rx="10" fill="#24b7ae" fill-opacity=".16"/>
+  <circle cx="207" cy="231" r="12" fill="#24b7ae"/><path d="M237 224H389M237 241H345" stroke="#8ff0e6" stroke-width="6" stroke-linecap="round" opacity=".6"/>
+  <g fill="#fff0c9" opacity=".82"><rect x="175" y="286" width="195" height="20" rx="10"/><rect x="175" y="329" width="292" height="14" rx="7" opacity=".55"/><rect x="175" y="362" width="242" height="14" rx="7" opacity=".55"/><rect x="175" y="426" width="118" height="38" rx="19" fill="#24b7ae"/></g>
+  <circle cx="626" cy="458" r="102" fill="#f35e9b" fill-opacity=".14" stroke="#f35e9b" stroke-width="2"/>
+  <path d="M590 447c0-26 72-26 72 0v19c0 26-72 26-72 0z" stroke="#fff0c9" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M576 462v10c0 38 100 38 100 0v-10M626 514v34M598 548h56" stroke="url(#line)" stroke-width="7" stroke-linecap="round"/>
+  <g fill="#ffc21a"><circle cx="592" cy="318" r="5"/><circle cx="653" cy="289" r="4"/><circle cx="715" cy="342" r="5"/></g>
+  <g font-family="monospace" fill="#8ff0e6"><text x="58" y="64" font-size="15" opacity=".7">RECEPTION DESK / AI-ASSISTED DEMO</text><text x="58" y="655" font-size="13" opacity=".6">booking · callbacks · voice UX · patient timeline</text></g>
+</svg>
