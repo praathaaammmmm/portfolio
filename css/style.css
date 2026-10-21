@@ -513,7 +513,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 /* ---------- Archive : varied bento tiles, not a uniform grid ---------- */
 .archive { position: relative; }
 .archive::after {
-  content: "03 PROJECTS ARCHIVED"; position: absolute; right: var(--gutter); top: 48px; z-index: 1;
+  content: "02 PROJECTS ARCHIVED"; position: absolute; right: var(--gutter); top: 48px; z-index: 1;
   font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase;
   color: rgba(255,240,201,.4);
 }
