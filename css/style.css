@@ -421,6 +421,9 @@ ul { list-style: none; margin: 0; padding: 0; }
   transform: perspective(1200px) rotateX(var(--ry, 0deg)) rotateY(var(--rx, 0deg));
   transition: transform .5s var(--ease-soft), box-shadow .5s var(--ease-soft);
 }
+.project-visual--button {
+  appearance: none; padding: 0; border: 0; color: inherit; font: inherit; text-align: inherit; cursor: pointer;
+}
 .project-scene:hover .project-visual {
   box-shadow: 0 40px 90px -20px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,240,201,.22), 0 0 70px -12px var(--accent-color, transparent);
 }
@@ -533,6 +536,7 @@ button.project-link { appearance: none; background: none; border: 0; border-bott
 .project-link--tertiary { font-size: 13px; font-weight: 500; border-bottom-color: transparent; opacity: .72; }
 .project-link--tertiary:hover { opacity: 1; }
 .project-link:focus-visible { outline: 2px solid var(--accent-color, currentColor); outline-offset: 3px; }
+.project-visual:focus-visible { outline: 3px solid var(--accent-color, var(--turquoise)); outline-offset: 5px; }
 /* the café tile's image and copy share the row; the image was pushing the copy out of the tile */
 .archive-anchor > .archive-visual { flex: 0 0 46%; min-width: 0; aspect-ratio: auto; }
 .archive-anchor > .archive-visual img { height: 100%; object-fit: cover; }

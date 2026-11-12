@@ -156,6 +156,16 @@
       ['App launcher: a minimal Wofi menu over the desktop.', 'Wofi application launcher open in the centre of a dark desktop with a chrome figure wallpaper.'],
       ['Control center: quick toggles, brightness, and pinned apps from Waybar.', 'Monochrome desktop wallpaper with a control center panel showing Wi-Fi, Bluetooth, audio, brightness, and pinned apps.'],
       ['Developer setup: system details in Kitty beside the browser.', 'Kitty terminal showing system information beside browser windows with the Linux-DotFiles repository and Hacker News.']
+    ] },
+    crm: { title: 'Internal CRM Workspace screens', path: 'assets/crm-demo', extension: 'png', thumbnails: false, shots: [
+      ['CEO dashboard: tasks, growth pipeline, approvals, quality, and organisation signals in one role-specific view. Fictional demo data.', 'Dark Internal CRM Workspace CEO dashboard with task, growth pipeline, approval, quality, and organisation summaries.'],
+      ['Task operations: a role-aware list of work, assignees, priority, status, and due dates. Fictional demo data.', 'Dark Internal CRM Workspace task list with projects, assignees, priorities, workflow statuses, and due dates.'],
+      ['Quality overview: release readiness, defects by severity, and delivery risks for operational review. Fictional demo data.', 'Dark Internal CRM Workspace quality dashboard with release readiness, defect severity, and defect status charts.'],
+      ['Defect management: audit-focused issue tracking with severity, ownership, status, and updated time. Fictional demo data.', 'Dark Internal CRM Workspace defects table with severity, status, project, assignee, and update columns.'],
+      ['Growth pipeline: pipeline stages, follow-ups, proposals, and recorded outcomes. Fictional demo data.', 'Dark Internal CRM Workspace growth overview with pipeline, follow-up, proposal, and attribution metrics.'],
+      ['Marketing operations: channel reach, content planning, campaigns, and recorded performance. Fictional demo data.', 'Dark Internal CRM Workspace marketing overview with channel reach, content status, campaign status, and outcome tables.'],
+      ['Content calendar: a role-specific publishing schedule across LinkedIn, Instagram, and YouTube. Fictional demo data.', 'Dark Internal CRM Workspace content calendar with scheduled and published social content across multiple channels.'],
+      ['Engineering operations: incidents, releases, and automation health in one operational view. Fictional demo data.', 'Dark Internal CRM Workspace engineering operations dashboard with incident severity, release completion, and automation status.']
     ] }
   };
 
@@ -166,7 +176,11 @@
   const galleryCaption = document.getElementById('project-gallery-caption');
   let activeGallery = null;
   let activeShot = 0;
-  const shotPath = (n, suffix = '') => `assets/projects/portfolio/gallery/${activeGallery.base}-${n + 1}${suffix}.webp`;
+  const shotPath = (n, suffix = '') => {
+    if (activeGallery.path) return `${activeGallery.path}/${n + 1}${suffix}.${activeGallery.extension || 'webp'}`;
+    return `assets/projects/portfolio/gallery/${activeGallery.base}-${n + 1}${suffix}.webp`;
+  };
+  const thumbnailPath = (n) => activeGallery.thumbnails === false ? shotPath(n) : shotPath(n, '-thumb');
 
   const showShot = (index) => {
     const total = activeGallery.shots.length;
@@ -198,8 +212,10 @@
         thumb.type = 'button';
         thumb.setAttribute('aria-label', `Screen ${i + 1}: ${caption}`);
         thumb.addEventListener('click', () => showShot(i));
-        image.src = shotPath(i, '-thumb');
+        image.src = thumbnailPath(i);
         image.alt = '';
+        image.loading = 'lazy';
+        image.decoding = 'async';
         image.width = 88;
         image.height = 54;
         thumb.append(image);
